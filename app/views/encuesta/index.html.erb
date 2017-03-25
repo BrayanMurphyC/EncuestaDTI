@@ -1,0 +1,71 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Encuesta</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Pregunta1</th>
+      <th>Pregunta2</th>
+      <th>Pregunta3</th>
+      <th>Pregunta4</th>
+      <th>Pregunta5</th>
+      <th>Pregunta6</th>
+      <th>Pregunta7</th>
+      <th>Pregunta8</th>
+      <th>Pregunta9</th>
+      <th>Pregunta10</th>
+      <th>Pregunta11</th>
+      <th>Pregunta12</th>
+      <th>Pregunta13</th>
+      <th>Recomendaciones</th>
+      <th>Temas</th>
+      <th>Comentarios</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @encuesta.each do |encuestum| %>
+      <tr>
+        <td><%= encuestum.pregunta1 %></td>
+        <td><%= encuestum.pregunta2 %></td>
+        <td><%= encuestum.pregunta3 %></td>
+        <td><%= encuestum.pregunta4 %></td>
+        <td><%= encuestum.pregunta5 %></td>
+        <td><%= encuestum.pregunta6 %></td>
+        <td><%= encuestum.pregunta7 %></td>
+        <td><%= encuestum.pregunta8 %></td>
+        <td><%= encuestum.pregunta9 %></td>
+        <td><%= encuestum.pregunta10 %></td>
+        <td><%= encuestum.pregunta11 %></td>
+        <td><%= encuestum.pregunta12 %></td>
+        <td><%= encuestum.pregunta13 %></td>
+        <td><%= encuestum.recomendaciones %></td>
+        <td><%= encuestum.temas %></td>
+        <td><%= encuestum.comentarios %></td>
+        <td><%= link_to 'Show', encuestum %></td>
+        <td><%= link_to 'Edit', edit_encuestum_path(encuestum) %></td>
+        <td><%= link_to 'Destroy', encuestum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+<%= pie_chart({"PREGUNTA 1" => encuestum.pregunta1, "PREGUNTA 2" => encuestum.pregunta2, "PREGUNTA 3" => encuestum.pregunta3,"PREGUNTA 4" => encuestum.pregunta4, "PREGUNTA 5" => encuestum.pregunta5, "PREGUNTA 6" => encuestum.pregunta6} , donut: true) %>
+
+
+<!-- <%= timeline [
+  ["CREACION",encuestum.created_at, encuestum.updated_at],
+] %> -->
+
+<!-- PAGINA: http://chartkick.com/ -->
+
+<!--ANTES DE MIGRAR DAR VALOR POR DEFAULT: ,  default: 0-->
+<!-- rails generate scaffold Encuesta  pregunta1:integer  pregunta2:integer pregunta3:integer pregunta4:integer pregunta5:integer pregunta6:integer pregunta7:integer pregunta8:integer pregunta9:integer pregunta10:integer pregunta11:integer pregunta12:integer pregunta13:integer recomendaciones:text temas:text comentarios:text
+-->
+
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nueva encuesta', new_encuestum_path %> MUESTRA: <%=Encuestum.count%>

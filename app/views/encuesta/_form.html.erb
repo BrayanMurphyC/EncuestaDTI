@@ -1,0 +1,144 @@
+<%= form_for(encuestum) do |f| %>
+  <% if encuestum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(encuestum.errors.count, "error") %> prohibited this encuestum from being saved:</h2>
+
+      <ul>
+      <% encuestum.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+      <%= f.label :pregunta1 , "Grado percibido de dominio del tema"%>
+      <!-- <%= f.select :pregunta1, options_for_select([["Malo", "1"], ["Regular", "2"]]) %> -->
+      <%= f.radio_button :pregunta1, "1" %>
+      <%= f.radio_button :pregunta1, "2" %>
+      <%= f.radio_button :pregunta1, "3" %>
+      <%= f.radio_button :pregunta1, "4" %>
+      <%= f.radio_button :pregunta1, "5" %>
+
+    </div>
+
+    <div class="field">
+      <%= f.label :pregunta2, "Claridad en la transmisión de los conocimientos"%>
+      <%= f.radio_button :pregunta2, "1" %>
+      <%= f.radio_button :pregunta2, "2" %>
+      <%= f.radio_button :pregunta2, "3" %>
+      <%= f.radio_button :pregunta2, "4" %>
+      <%= f.radio_button :pregunta2, "5" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :pregunta3,"Fomento a la participación de los asistentes" %>
+      <%= f.radio_button :pregunta3, "1" %>
+      <%= f.radio_button :pregunta3, "2" %>
+      <%= f.radio_button :pregunta3, "3" %>
+      <%= f.radio_button :pregunta3, "4" %>
+      <%= f.radio_button :pregunta3, "5" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :pregunta4, "Recomendaría este y otros eventos a otras personas" %>
+      <%= f.radio_button :pregunta4, "1" %>
+      <%= f.radio_button :pregunta4, "2" %>
+      <%= f.radio_button :pregunta4, "3" %>
+      <%= f.radio_button :pregunta4, "4" %>
+      <%= f.radio_button :pregunta4, "5" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :pregunta5, "Los expositores dominan los temas tratados." %>
+      <%= f.radio_button :pregunta5, "1" %>
+      <%= f.radio_button :pregunta5, "2" %>
+      <%= f.radio_button :pregunta5, "3" %>
+      <%= f.radio_button :pregunta5, "4" %>
+      <%= f.radio_button :pregunta5, "5" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :pregunta6, "Los expositores tienen dominio de grupo." %>
+      <%= f.radio_button :pregunta6, "1" %>
+      <%= f.radio_button :pregunta6, "2" %>
+      <%= f.radio_button :pregunta6, "3" %>
+      <%= f.radio_button :pregunta6, "4" %>
+      <%= f.radio_button :pregunta6, "5" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :pregunta7, "Los expositores estimulan la participación e intercambio de ideas y experiencias." %>
+      <%= f.radio_button :pregunta7, "1" %>
+      <%= f.radio_button :pregunta7, "2" %>
+      <%= f.radio_button :pregunta7, "3" %>
+      <%= f.radio_button :pregunta7, "4" %>
+      <%= f.radio_button :pregunta7, "5" %>
+    </div>
+    <div class="field">
+      <%= f.label :pregunta8, "Los materiales que recibió fueron acertados y suficientes."%>
+      <%= f.radio_button :pregunta8, "1" %>
+      <%= f.radio_button :pregunta8, "2" %>
+      <%= f.radio_button :pregunta8, "3" %>
+      <%= f.radio_button :pregunta8, "4" %>
+      <%= f.radio_button :pregunta8, "5" %>
+    </div>
+    <div class="field">
+      <%= f.label :pregunta9, "Las presentaciones fueron claras y fáciles de seguir."%>
+      <%= f.radio_button :pregunta9, "1" %>
+      <%= f.radio_button :pregunta9, "2" %>
+      <%= f.radio_button :pregunta9, "3" %>
+      <%= f.radio_button :pregunta9, "4" %>
+      <%= f.radio_button :pregunta9, "5" %>
+    </div>
+    <div class="field">
+      <%= f.label :pregunta10, "Extensión y detalle de la documentación recibida" %>
+      <%= f.radio_button :pregunta10, "1" %>
+      <%= f.radio_button :pregunta10, "2" %>
+      <%= f.radio_button :pregunta10, "3" %>
+      <%= f.radio_button :pregunta10, "4" %>
+      <%= f.radio_button :pregunta10, "5" %>
+    </div>
+    <div class="field">
+      <%= f.label :pregunta11, "La organización del seminario y el soporte logístico fueron apropiados." %>
+      <%= f.radio_button :pregunta11, "1" %>
+      <%= f.radio_button :pregunta11, "2" %>
+      <%= f.radio_button :pregunta11, "3" %>
+      <%= f.radio_button :pregunta11, "4" %>
+      <%= f.radio_button :pregunta11, "5" %>
+    </div>
+    <div class="field">
+      <%= f.label :pregunta12, "La duración del seminario fue adecuada." %>
+      <%= f.radio_button :pregunta12, "1" %>
+      <%= f.radio_button :pregunta12, "2" %>
+      <%= f.radio_button :pregunta12, "3" %>
+      <%= f.radio_button :pregunta12, "4" %>
+      <%= f.radio_button :pregunta12, "5" %>
+    </div>
+    <div class="field">
+      <%= f.label :pregunta13,"La sesión se cumplió en el horario dispuesto." %>
+      <%= f.radio_button :pregunta13, "1" %>
+      <%= f.radio_button :pregunta13, "2" %>
+      <%= f.radio_button :pregunta13, "3" %>
+      <%= f.radio_button :pregunta13, "4" %>
+      <%= f.radio_button :pregunta13, "5" %>
+    </div7
+
+  <div class="field">
+    <%= f.label :recomendaciones, "¿Qué recomendaciones sugiere para el mejoramiento con respecto a este y los próximos eventos?" %>
+    <%= f.text_area :recomendaciones %>
+  </div>
+
+  <div class="field">
+    <%= f.label :temas, "¿Qué otros temas recomendaría o desea que se amplíen?" %>
+    <%= f.text_area :temas %>
+  </div>
+
+  <div class="field">
+    <%= f.label :comentarios , "Comentarios"%>
+    <%= f.text_area :comentarios %>
+  </div>
+  <div class="actions">
+    <%= f.submit %> 
+  </div>
+<% end %>

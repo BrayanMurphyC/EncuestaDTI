@@ -1,0 +1,37 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pregunta1: 1
+  pregunta2: 1
+  pregunta3: 1
+  pregunta4: 1
+  pregunta5: 1
+  pregunta6: 1
+  pregunta7: 1
+  pregunta8: 1
+  pregunta9: 1
+  pregunta10: 1
+  pregunta11: 1
+  pregunta12: 1
+  pregunta13: 1
+  recomendaciones: MyText
+  temas: MyText
+  comentarios: MyText
+
+two:
+  pregunta1: 1
+  pregunta2: 1
+  pregunta3: 1
+  pregunta4: 1
+  pregunta5: 1
+  pregunta6: 1
+  pregunta7: 1
+  pregunta8: 1
+  pregunta9: 1
+  pregunta10: 1
+  pregunta11: 1
+  pregunta12: 1
+  pregunta13: 1
+  recomendaciones: MyText
+  temas: MyText
+  comentarios: MyText
